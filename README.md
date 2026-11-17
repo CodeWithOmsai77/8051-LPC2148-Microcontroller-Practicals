@@ -4,6 +4,16 @@ A collection of Microcontroller and Applications (MCA) practical programs using 
 
 This repository contains C programs, implementation notes, and compilation instructions for microcontroller interfacing experiments.
 
+## Contents
+
+- [Repository Structure](#repository-structure)
+- [Practical List](#practical-list)
+- [Development Environment](#development-environment)
+- [8051 Compilation and Simulation](#8051-compilation-and-simulation)
+- [LPC2148 Development](#lpc2148-development)
+- [Important Notes](#important-notes)
+- [Learning Objectives](#learning-objectives)
+
 ## Repository Structure
 
 ```text
@@ -92,14 +102,22 @@ LPC2148 programs require:
 
 These programs are intended as starting examples and may require changes according to the actual circuit connections and peripheral configuration.
 
+Compile an LPC2148 program with your ARM GCC toolchain. The exact command depends on your installed toolchain and linker script, so the example below is a placeholder:
+
+```bash
+arm-none-eabi-gcc -mcpu=arm7tdmi -c LPC2148/04_GLCD_Interfacing.c -o 04_GLCD_Interfacing.o
+```
+
+Adjust the compiler, flags, and linking steps to match your project setup.
+
 ## Important Notes
 
 - The 8051 examples use SDCC-compatible headers.
 - The LPC2148 examples depend on the LPC214x device header and hardware configuration.
-- GPS forwarding is not the same as GPS coordinate parsing.
-- The SD-card example demonstrates an initial SPI command, not complete SD-card read/write functionality.
+- GPS forwarding does not parse GPS coordinates.
+- The SD-card example sends an initial SPI command. It does not implement full SD-card read/write.
 - GLCD and keypad programs require matching pin connections.
-- Compilation does not guarantee correct hardware operation. Verify each practical with suitable hardware or simulation.
+- Compilation does not guarantee correct hardware operation. Verify each practical on suitable hardware or in a simulator.
 
 ## Learning Objectives
 
