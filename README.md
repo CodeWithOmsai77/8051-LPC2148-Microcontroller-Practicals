@@ -119,3 +119,18 @@ These programs are intended as starting examples and may require changes accordi
 ---
 
 *This repository is maintained as part of academic practical learning and embedded systems development.*
+
+## Practical Validation Checklist
+
+Use this checklist when adapting an example to a physical board or simulator:
+
+- [ ] Confirm the exact MCU variant, clock source, compiler and device header.
+- [ ] Verify pin multiplexing and peripheral pin assignments against the device datasheet.
+- [ ] Confirm voltage levels, common ground and external component requirements before wiring.
+- [ ] Check peripheral status flags and timeouts instead of assuming every transaction succeeds.
+- [ ] Record the expected input/output behaviour and test both normal and failure conditions.
+- [ ] Separate hardware-dependent validation from compiler-only checks.
+
+## Practical Status and Limitations
+
+The source files are educational starting points. The presence of a program in this repository does not mean it has been validated on every board revision. For each practical, record the board, toolchain version, wiring, test procedure and observed result in its project notes. In particular, distinguish code compilation from successful peripheral operation on hardware.
